@@ -37,6 +37,6 @@ docker compose build
 docker compsoe up
 ```
 
-## Resource
+*Resource*
 
 - https://devandchill.com/posts/2019/06/net-core-3.0-publish-single-file-binary-on-alpine-container
