@@ -1,4 +1,6 @@
 .DS_Store
+.ionide
+output
 
 node_modules
 dist

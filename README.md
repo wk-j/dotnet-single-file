@@ -3,31 +3,31 @@
 *Publish*
 
 ```
-dotnet publish \
-    -r osx-x64 \
+dotnet publish -r osx-x64 \
     -c Release \
+    -o output \
     /p:PublishSingleFile=true  \
     /p:PublishReadyToRun=true \
     /p:PublishTrimed=true \
-    src/MyApp
-```
+    /v:q \
+    -nologo \
+    src/MyConsole
 
-*List file*
+output/MyConsole
 
-```
-ls src/MyApp/bin/Release/netcoreapp3.0/osx-x64/publish
-```
-
-*Execute*
-
-```bash
-src/MyApp/bin/Release/netcoreapp3.0/osx-x64/publish/MyApp
+dotnet publish -r osx-x64 -c Release -o output -nologo \
+    /v:q \
+    /p:PublishSingleFile=true  \
+    /p:PublishReadyToRun=true \
+    /p:PublishTrimed=true \
+    src/MyConsole
 ```
 
 *Check file size*
 
-```
-wk-file-size -m src/MyApp/bin/Release/netcoreapp3.0/osx-x64/publish/MyApp
+```bash
+wk-file-size -m output/MyConsole
+du -k output/MyConsole
 ```
 
 *Build Docker*
