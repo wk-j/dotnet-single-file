@@ -1,6 +1,11 @@
 .DS_Store
 .ionide
 output
+deploy
+
+
+dotnetwarp_temp
+Optimize
 
 node_modules
 dist

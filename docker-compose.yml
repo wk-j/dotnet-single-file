@@ -10,3 +10,8 @@ services:
     build:
       context: .
       dockerfile: z-console.Dockerfile
+
+  warp:
+    build:
+      context: .
+      dockerfile: z-warp.Dockerfile

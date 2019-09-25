@@ -14,13 +14,6 @@ dotnet publish -r osx-x64 \
     src/MyConsole
 
 output/MyConsole
-
-dotnet publish -r osx-x64 -c Release -o output -nologo \
-    /v:q \
-    /p:PublishSingleFile=true  \
-    /p:PublishReadyToRun=true \
-    /p:PublishTrimed=true \
-    src/MyConsole
 ```
 
 *Check file size*
@@ -35,6 +28,23 @@ du -k output/MyConsole
 ```
 docker compose build
 docker compsoe up
+```
+
+*Warp*
+
+```
+mkdir output
+
+dotnet new tool-manifest
+dotnet tool install dotnet-warp
+
+dotnet warp  src/MyConsole -o output/MyConsole
+dotnet warp  src/MyApp -o output/MyApp
+
+output/MyApp
+output/MyConsole
+
+du -k output/*
 ```
 
 *Resource*
