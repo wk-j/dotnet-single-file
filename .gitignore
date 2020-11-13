@@ -26,3 +26,5 @@ publish
 
 target
 BenchmarkDotNet.Artifacts
+
+__output__
